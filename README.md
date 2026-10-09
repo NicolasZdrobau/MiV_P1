@@ -14,8 +14,3 @@ pip install -r requirements.txt
 streamlit run app.py
 ```
 S'obre al navegador a `http://localhost:8501`.
-
-Per veure només el resultat del preprocessament:
-```bash
-python preprocessament.py
-```
