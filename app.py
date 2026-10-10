@@ -55,10 +55,7 @@ if "trimestre" not in st.session_state:
 
 
 
-"""
-    Gràfic 1; mostr a l'evolució de la mesura seleccionada per trimestre, amb línies i punts interactius.
-
-"""
+# Gràfic 1: mostra l'evolució de la mesura seleccionada per trimestre, amb línies i punts interactius.
 st.subheader(f"{nom_mesura} per trimestre")
 st.caption("Passa el ratolí per veure el valor exacte · Mou el control lliscant per canviar el trimestre que es compara a sota")
 
@@ -103,9 +100,7 @@ fig_l.update_yaxes(**EIX, title=m["eix"], rangemode="tozero",  # eix sempre des 
  
 st.plotly_chart(fig_l, use_container_width=True, key="linies")
 
-"""
-    Gràfic 2; comparació de la mesura seleccionada entre les tres empreses per al trimestre seleccionat, amb barres i valors exactes a sobre.
-"""
+# Gràfic 2: comparació de la mesura seleccionada entre les tres empreses en el trimestre seleccionat, amb barres i valors exactes a sobre.
 st.select_slider("Trimestre", options=trimestres, key="trimestre")  
 
 sel = df[df["Etiqueta"] == st.session_state.trimestre]
